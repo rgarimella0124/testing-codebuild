@@ -1,0 +1,14 @@
+service: Dummy
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+  stage: dev
+  region: ap-south-1
+
+functions:
+  helloworld:
+    handler: handler.helloworld
