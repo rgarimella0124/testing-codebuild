@@ -1,20 +1,8 @@
-"use strict";
-
-module.exports.helloworld = async (event, context, callback) => {
+exports.handler = async (event) => {
+  // TODO implement
   const response = {
-    statusCode: 200,
-    body: JSON.stringify(
-      {
-        message: printHelloWorld(),
-        input: event,
-      },
-      null,
-      2
-    ),
+      statusCode: 200,
+      body: JSON.stringify('Hello from Lambda!'),
   };
-  callback(null, response);
+  return response;
 };
-function printHelloWorld() {
-  return "Hello World";
-}
-module.exports.printHelloWorld = printHelloWorld;
