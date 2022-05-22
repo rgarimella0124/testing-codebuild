@@ -12,9 +12,7 @@ phases:
       - echo install pre build commands
   build:
     commands:
-      - echo Installing NPM Packages
       - npm install
-      - echo Running tests
       - npm run test
   post_build:
     commands:
