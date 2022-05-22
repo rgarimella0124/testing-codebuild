@@ -18,7 +18,7 @@ phases:
       - npm run test
   post_build:
     commands:
-      - echo Entering Post_Build Phase
+      - aws lambda update-function-code \--function-name  My_Lambda \--s3-bucket backendartifacts --s3-key Build.zip
 artifacts:
   files:
     - "**/*"
